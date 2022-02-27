@@ -37,3 +37,7 @@
 - Mọi khó khăn chỉ mới bắt đầu
 
 - Copy trước sáng tạo sau
+
+- Khi đến đỉnh núi nhất định đỉnh núi đó chỉ là chân núi của ngọn núi khác
+
+- Muốn đi nhanh, đầu tiên hãy đi chậm
