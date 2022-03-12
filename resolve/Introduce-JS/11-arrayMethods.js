@@ -312,3 +312,98 @@
  * 2/ Đảo ngược ký tự "i love you" => "uoy evol i"
  * 3/ In hoa chữ cái đầu của từ: nam -> Nam. nhưng lúc nào là 1 chuỗi gồm họ và tên.
  */
+
+// Nói sơ về by value và by Reference?
+// # By Value có nghĩa là dữ liệu dữ liệu được lưu trong vùng nhớ.
+// const num1 = 1;
+// const num2 = 1;
+// console.log(num1 === num1); //true
+// giải thích: Khi khởi tạo num1 có giá trị 1 trong vùng nhớ 1, và num2 có giá trị 1 trong vùng nhớ 2 so sánh 2 giá trị với nhau.
+
+// # By Reference
+
+// const arr1 = [1];
+// const arr2 = [1];
+// console.log(arr1 === arr2); // false
+
+// giải thích: Khi khởi tạo arr1 có giá trị [1], và num2 có giá trị [1], khi so sánh chỉ ám chỉ 2 vùng bộ nhớ, chứ ko so sánh 2 giá trị
+
+// Vậy để so sánh mảng ta dùng cách nào ?
+// Để giải quyết vấn đề này ta sử dụng JSON
+// JSON.stringify(): Đưa array thuần về string
+// JSON.parse(): Đưa string thuần về array
+
+// const array1 = [1, 2, 3, 4];
+// const array2 = [1, 2, 3, 4];
+
+// console.log('array', array1);
+// console.log('JSON', JSON.stringify(array1));
+
+// const json = JSON.stringify(array1);
+// console.log('Kết quả so sánh array:', array1 === array2);
+// console.log('Kết quả so sánh JSON:', JSON.stringify(array1) === JSON.stringify(array2));
+
+// console.log(JSON.parse(json));
+
+// Tại sao không dùng toString() để convert sang string ? Vì nó sẽ trả về type khác với array thuần ví dụ => [1,2,3] => "1,2,3"
+
+// --------------------------------------------------------------------------------------------------------------------------------------
+// Cách sao chép mảng ?
+// Thao tác trên mảng được copy từ mảng gốc để có thể không gây ra lỗi khi tiếp tục thao tác với mảng cũ.
+// const array1 = ['a', 'b', 'c', 'd', 'e'];
+
+// console.log(array1.pop()); // Cắt phần tử cuối
+
+// console.log('step 2', array1); // ['a', 'b', 'c', 'd']
+
+// Cách 1: Dùng slice
+// const newArray = array1.slice();
+// console.log('newArray', newArray);
+
+// Cách 2: ES6: Spread Operator
+// const array2 = [...array1];
+// console.log('array2', array2);
+
+// -------------------------------------------------------------------
+// const array1 = [1, 2, 3, 4];
+// const array2 = ['a', 'b'];
+// const array3 = [9, 3];
+
+// Cách để gộp mảng
+// Cách 1: Sử dụng concat
+// const totalArray = array1.concat(array2, array3);
+
+// console.log(totalArray);
+
+// Cách 2: Sử dụng ES6: Spread Operator
+
+// const totalArray = [...array1, ...array2, ...array3];
+// console.log(totalArray);
+
+// Destructoring Array
+// const arr = ['nam', 'nu', 'bede', 'gay'];
+// const a = arr[0];
+// const b = arr[1];
+// const c = arr[2];
+
+// const arr = ['hồng', 'huệ', 'lan', 'mai'];
+// const [a, b, c] = arr;
+
+// console.log(a, b, c);
+
+// ------------------------------------------------------------
+// Tìm hiểu rest parameter
+// rest là tham số nằm bên tay trái và có chức năng lấy hết các phần tử còn lại
+// const arr = ['ngọc', 'lan', 'hậu', 'võ', 'đạt'];
+
+// const [a, b, ...rest] = arr;
+// console.log(rest);
+
+// function sum(...params) {
+//   const total = params.reduce((previous, current) => {
+//     return (current += previous);
+//   }, 0);
+
+//   console.log(total);
+// }
+// sum(1, 2, 3, 6);

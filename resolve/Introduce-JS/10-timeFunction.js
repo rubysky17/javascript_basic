@@ -45,7 +45,7 @@
 // new Date(year, month, day, hour. minute, second) // month tính từ số 0
 
 // Ví dụ
-// console.log(new Date());
+// console.log( );
 // console.log(new Date(1645963063890));
 // console.log(new Date('Sun Feb 27 2022 18:57:43 GMT+0700 (Indochina Time)'));
 // console.log(new Date(2022, 5, 1, 23, 43, 43));

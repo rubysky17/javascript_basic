@@ -12,7 +12,7 @@
 // sử dụng return trong function
 // cách gọi hàm;
 
-// 1/ default params: gán giá trị ặc định cho tham số khi hàm không nhận được tham số.
+// 1/ default params: gán giá trị mặc định cho tham số khi hàm không nhận được tham số.
 // 2/ giải thích hoisting khi hàm được gọi trước khi khai báo.
 
 // console.log('Vậy tổng là: ', calculateSum(3));
@@ -68,8 +68,8 @@
 // console.log(bien1); // Error defined if let
 // console.log(bien1); // valid defined if var
 
-// Phân biệt global,function,block scope và hoisting với var let const ????
-// Nên sử dụng khai báo nào
+// Phân biệt global, function, block scope và hoisting với var let const ????
+// Nên sử dụng khai báo nào ? => xài let và const
 
 //----------------------------------------------------
 // Anonymous Function

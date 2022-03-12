@@ -68,3 +68,9 @@ console.log('floor more than 5', Math.floor(numDecimal3)); // 3
 console.log('round under 5', Math.round(numDecimal1)); // 4
 console.log('round equal 5', Math.round(numDecimal2)); // 4
 console.log('round more than 5', Math.round(numDecimal3)); // 4
+
+// Math.sign(number) => hàm cho phép kiểm tra s61 dương hay số âm
+// => 1 : số dương
+// => -1 : số âm
+console.log(Math.sign(20)); // 1
+console.log(Math.sign(-20)); //-1
